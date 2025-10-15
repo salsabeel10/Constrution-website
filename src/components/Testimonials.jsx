@@ -60,7 +60,7 @@ const prevSlide = () => {
                 <img
                   src={item.bg}
                   alt="Background"
-                  className="w-full object-cover"
+                  className="w-full object-cover transform transition-transform duration-500 hover:scale-104"
                 />
 
                 {/* Overlay card */}

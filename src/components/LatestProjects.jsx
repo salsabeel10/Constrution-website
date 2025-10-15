@@ -55,7 +55,7 @@ const LatestProjects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover transform transition-transform duration-500 hover:scale-104"
               />
               <div className="p-5 text-left">
                 <h3 className="text-lg font-semibold mb-2">{project.title}</h3>

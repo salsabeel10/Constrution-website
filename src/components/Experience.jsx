@@ -13,7 +13,7 @@ const Experience = () => {
           <img
             src="/living-room.png" // replace with your image path
             alt="Interior Design"
-            className="relative rounded-2xl shadow-xl z-10 w-full max-w-md object-cover"
+            className="relative rounded-2xl shadow-xl z-10 w-full max-w-md object-cover transform transition-transform duration-500 hover:scale-104"
           />
         </div>
 

@@ -34,19 +34,19 @@ const MaterialsSection = () => {
             <img
               src="./mat-3.png"
               alt="Interior chair"
-              className="rounded-xl shadow-xxl object-cover w-40 h-40 md:w-48 md:h-48"
+              className="rounded-xl shadow-xxl object-cover w-40 h-40 md:w-48 md:h-48 transform transition-transform duration-500 hover:scale-104"
             />
             {/* Large image */}
             <img
               src="./mat-1.png"
               alt="Dining room"
-              className="rounded-xl mt-18 shadow-xxl object-cover row-span-2 w-48 h-96 md:w-72 md:h-[380px]"
+              className="rounded-xl mt-18 shadow-xxl object-cover row-span-2 w-48 h-96 md:w-72 md:h-[380px] transform transition-transform duration-500 hover:scale-104"
             />
             {/* Small image 2 */}
             <img
               src="./mat-2.png"
               alt="Modern sofa"
-              className="rounded-xl mt-6 shadow-xxl object-cover w-40 h-40 md:w-48 md:h-[240px]"
+              className="rounded-xl mt-6 shadow-xxl object-cover w-40 h-40 md:w-48 md:h-[240px] transform transition-transform duration-500 hover:scale-104"
             />
           </div>
         </div>

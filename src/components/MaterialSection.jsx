@@ -4,7 +4,7 @@ import React from "react";
 const MaterialsSection = () => {
   return (
     <section className="bg-white py-20">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+      <div className="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center gap-12">
         {/* Left: Text */}
         <div className="md:w-1/2">
           <p className="text-sm uppercase tracking-widest text-orange-500 font-semibold mb-3">

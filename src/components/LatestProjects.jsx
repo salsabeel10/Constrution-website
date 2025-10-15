@@ -34,7 +34,7 @@ const LatestProjects = () => {
         <h2 className="text-2xl font-semibold mb-8">Latest Projects</h2>
 
         {/* Category buttons */}
-        <div className="flex justify-center space-x-3 mb-10">
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
           {categories.map((cat, index) => (
             <button
               key={index}
@@ -75,7 +75,7 @@ const LatestProjects = () => {
 
         {/* View All button */}
         <div className="mt-10">
-          <button className="px-6 py-2 bg-orange-500 text-white font-medium rounded-md hover:bg-teal-600 transition cursor-pointer">
+          <button className="px-6 py-2 border border-transparent bg-orange-500 text-white font-medium rounded-md hover:bg-white hover:text-[#001327] hover:border-[#001327] transition cursor-pointer">
             View All Projects
           </button>
         </div>

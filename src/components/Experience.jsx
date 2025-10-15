@@ -2,7 +2,7 @@ import React from "react";
 
 const Experience = () => {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-5">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
         {/* Left: Image */}
         <div className="relative md:w-1/2 flex justify-center">

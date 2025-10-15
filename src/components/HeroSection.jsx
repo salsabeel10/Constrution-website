@@ -20,10 +20,10 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-wrap gap-4">
-          <button className="bg-[#3FEFFF] text-black font-semibold px-6 py-3 rounded-md shadow-md hover:bg-[#00aee6] transition cursor-pointer">
+          <button className="bg-orange-500 text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-white hover:text-black  transition cursor-pointer">
             Get Quote →
           </button>
-          <button className="border border-[#00BFFF] text-[#FFFFF] font-semibold px-6 py-3 rounded-md hover:bg-[#3FEFFF] hover:text-black transition cursor-pointer">
+          <button className="border border-orange-500 text-white font-semibold px-6 py-3 rounded-md hover:bg-white hover:text-black hover:border-transparent transition cursor-pointer">
             Contact Us →
           </button>
         </div>

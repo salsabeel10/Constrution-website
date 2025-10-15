@@ -10,11 +10,12 @@ const Hero = () => {
             Complete Contracting & Maintenance Solutions In Dubai
           </h1>
           <p className="text-gray-300 text-lg mb-8">
-            From HVAC & MEP to interior, exterior, and facility works — we do it all.
+            From HVAC & MEP to interior, exterior, and facility works — we do it
+            all.
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <button className="bg-[#00BFFF] text-black font-semibold px-6 py-3 rounded-md shadow-md hover:bg-[#00aee6] transition">
+            <button className="bg-orange-500 text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-[#00aee6] transition">
               Get Quote →
             </button>
             <button className="border border-[#00BFFF] text-[#00BFFF] font-semibold px-6 py-3 rounded-md hover:bg-[#00BFFF] hover:text-black transition">

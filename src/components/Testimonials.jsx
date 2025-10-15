@@ -3,7 +3,7 @@ import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 // Example images — replace these with your own imports or URLs
 import client1 from "../assets/clients/client1.png";
-
+import testi from "../assets/testimonials/test-2.png"
 
 const testimonials = [
   {
@@ -12,7 +12,7 @@ const testimonials = [
     review:
       "Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal",
     image: client1,
-    bg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    bg: testi,
   },
   {
     name: "Ibuk Sukijan",
@@ -20,15 +20,14 @@ const testimonials = [
     review:
       "Makasih Panto, aku sekarang berasa tinggal di apartemen, karena barang-barang terlihat mewah",
     image: client1,
-    bg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    bg: testi,
   },
   {
     name: "Mpok Ina",
     role: "Karyawan Swasta",
-    review:
-      "Sangat terjangkau untuk kantong saya yang tidak terlalu banyak",
+    review: "Sangat terjangkau untuk kantong saya yang tidak terlalu banyak erlihat mewa",
     image: client1,
-    bg: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    bg: testi,
   },
 ];
 
@@ -47,7 +46,7 @@ const Testimonials = () => {
         {/* Testimonials wrapper */}
         <div className="relative flex justify-center items-center space-x-6">
           {/* Left arrow */}
-          <button className="absolute -left-6 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-orange-500 hover:text-white transition">
+          <button className="absolute left-10 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-orange-500 hover:text-white transition cursor-pointer">
             <FaChevronLeft />
           </button>
 
@@ -62,12 +61,12 @@ const Testimonials = () => {
                 <img
                   src={item.bg}
                   alt="Background"
-                  className="w-full h-72 object-cover"
+                  className="w-full object-cover"
                 />
 
                 {/* Overlay card */}
-                <div className="absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl p-6 shadow-md">
-                  <div className="flex flex-col items-center">
+                <div className="absolute bottom-5 left-5 right-5 bg-white rounded-t-3xl p-6 shadow-md">
+                  <div className="flex flex-col items-center text-center">
                     <img
                       src={item.image}
                       alt={item.name}
@@ -88,9 +87,8 @@ const Testimonials = () => {
               </div>
             ))}
           </div>
-
           {/* Right arrow */}
-          <button className="absolute -right-6 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-orange-500 hover:text-white transition">
+          <button className="absolute right-15 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-orange-500 hover:text-white transition cursor-pointer">
             <FaChevronRight />
           </button>
         </div>

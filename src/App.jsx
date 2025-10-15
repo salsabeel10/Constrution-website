@@ -8,6 +8,8 @@ import Experience from './components/Experience'
 import MaterialsSection from './components/MaterialSection'
 import LatestProjects from './components/LatestProjects'
 import Testimonials from './components/Testimonials'
+import Footer from './components/Footer'
+
 
 
 const App = () => {
@@ -20,6 +22,7 @@ const App = () => {
       <MaterialsSection />
       <LatestProjects />
       <Testimonials />
+      <Footer />
     </div>
   )
 }

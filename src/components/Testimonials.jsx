@@ -1,37 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { testimonials } from "../data/testimonials";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
-// Example images — replace these with your own imports or URLs
-import client1 from "../assets/clients/client1.png";
-import testi from "../assets/testimonials/test-2.png"
-
-const testimonials = [
-  {
-    name: "Bang Upin",
-    role: "Pedagang Asongan",
-    review:
-      "Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal",
-    image: client1,
-    bg: testi,
-  },
-  {
-    name: "Ibuk Sukijan",
-    role: "Ibu Rumah Tangga",
-    review:
-      "Makasih Panto, aku sekarang berasa tinggal di apartemen, karena barang-barang terlihat mewah",
-    image: client1,
-    bg: testi,
-  },
-  {
-    name: "Mpok Ina",
-    role: "Karyawan Swasta",
-    review: "Sangat terjangkau untuk kantong saya yang tidak terlalu banyak erlihat mewa",
-    image: client1,
-    bg: testi,
-  },
-];
 
 const Testimonials = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const cardsPerPage = isMobile ? 1 : 3;
+
+  const nextSlide = () => {
+  if (currentIndex < testimonials.length - cardsPerPage) {
+    setCurrentIndex(currentIndex + 1);
+  }
+};
+
+const prevSlide = () => {
+  if (currentIndex > 0) {
+    setCurrentIndex(currentIndex - 1);
+  }
+};
+
+  const visibleTestimonials = testimonials.slice(
+    currentIndex,
+    currentIndex + cardsPerPage
+  );
+
   return (
     <section className="py-20 bg-white relative">
       <div className="container mx-auto px-6 text-center">
@@ -44,15 +39,19 @@ const Testimonials = () => {
         <h2 className="text-3xl font-bold mt-2 mb-12">Our Client Reviews</h2>
 
         {/* Testimonials wrapper */}
-        <div className="relative flex justify-center items-center space-x-6">
+        <div className="relative flex justify-center items-center">
           {/* Left arrow */}
-          <button className="absolute left-10 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-orange-500 hover:text-white transition cursor-pointer">
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 md:left-10 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-orange-500 hover:text-white transition cursor-pointer disabled:opacity-40"
+            disabled={currentIndex === 0}
+          >
             <FaChevronLeft />
           </button>
 
-          {/* Testimonial cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((item, index) => (
+          {/* Cards container */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 transition-all duration-500">
+            {visibleTestimonials.map((item, index) => (
               <div
                 key={index}
                 className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition"
@@ -87,8 +86,13 @@ const Testimonials = () => {
               </div>
             ))}
           </div>
+
           {/* Right arrow */}
-          <button className="absolute right-15 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-orange-500 hover:text-white transition cursor-pointer">
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 md:right-10 top-1/2 transform -translate-y-1/2 bg-white shadow-lg rounded-full p-3 hover:bg-orange-500 hover:text-white transition cursor-pointer disabled:opacity-40"
+            disabled={currentIndex + cardsPerPage >= testimonials.length}
+          >
             <FaChevronRight />
           </button>
         </div>

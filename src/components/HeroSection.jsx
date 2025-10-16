@@ -4,7 +4,7 @@ import React from "react";
 const HeroSection = () => {
   return (
     <section
-      className="relative bg-cover bg-top bg-no-repeat text-white pt-30 pb-30"
+      className="relative bg-cover bg-top bg-no-repeat text-white pt-30 pb-15"
       style={{ backgroundImage: "url('./hero_2.png')" }} // background image
     >
       {/* Overlay */}

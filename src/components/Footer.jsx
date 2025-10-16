@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Logo and Description */}
         <div>
           <img
-            src="./logo-dark.png"
+            src="./logo-dark.svg"
             alt="Arrow Point Tech Cont. LLC"
             className="h-30 mb-4"
           />

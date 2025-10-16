@@ -17,8 +17,8 @@ const MaterialsSection = () => {
             Whether it’s flooring, painting, or carpentry, we source top-quality materials 
             to ensure safety, durability, and a polished finish that stands the test of time.
           </p>
-          <button className="text-orange-500 text-sm font-medium hover:underline flex items-center cursor-pointer">
-            More Info
+          <button className="text-orange-500 text-sm font-medium flex items-center cursor-pointer">
+            <span className="hover:underline">More Info</span>
             <span className="ml-1">→</span>
           </button>
         </div>

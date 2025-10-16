@@ -8,22 +8,19 @@ const WhyChooseUs = () => {
       title: "Experienced Professionals",
       short:
         "Our certified engineers and skilled technicians bring years of experience in HVAC, MEP, interior, and exterior works ...",
-      full:
-        "Our certified engineers and skilled technicians bring years of experience across diverse projects — from residential villas to large commercial facilities. We combine technical expertise with precision workmanship to ensure every job is completed to the highest standards.",
+      full: "Our certified engineers and skilled technicians bring years of experience across diverse projects — from residential villas to large commercial facilities. We combine technical expertise with precision workmanship to ensure every job is completed to the highest standards.",
     },
     {
       title: "Quality & Safety Assured",
       short:
         "We follow Dubai’s strict building standards and international safety practices, using only top-grade materials ...",
-      full:
-        "We strictly adhere to Dubai Municipality regulations and international best practices for safety and quality. Every project undergoes rigorous inspection and testing, ensuring durability, compliance, and peace of mind for our clients.",
+      full: "We strictly adhere to Dubai Municipality regulations and international best practices for safety and quality. Every project undergoes rigorous inspection and testing, ensuring durability, compliance, and peace of mind for our clients.",
     },
     {
       title: "On-Time Project Delivery",
       short:
         "We plan, execute, and deliver every project on schedule. Our dedicated project management team ensures ...",
-      full:
-        "We take timelines seriously. Our project management team uses detailed scheduling and continuous supervision to deliver work efficiently without compromising on quality. Whether it’s a small maintenance task or a full renovation, we stay on track and within scope.",
+      full: "We take timelines seriously. Our project management team uses detailed scheduling and continuous supervision to deliver work efficiently without compromising on quality. Whether it’s a small maintenance task or a full renovation, we stay on track and within scope.",
     },
   ];
 
@@ -62,12 +59,12 @@ const WhyChooseUs = () => {
 
                 {/* Button */}
                 <button
-                  className="mt-3 text-orange-500 text-sm font-medium hover:underline flex items-center cursor-pointer"
-                  onClick={() =>
-                    setExpanded(expanded === index ? null : index)
-                  }
+                  className="group mt-3 text-orange-500 text-sm font-medium flex items-center cursor-pointer"
+                  onClick={() => setExpanded(expanded === index ? null : index)}
                 >
-                  {expanded === index ? "Show Less" : "More Info"}
+                  <span className="group-hover:underline">
+                    {expanded === index ? "Show Less" : "More Info"}
+                  </span>
                   <span className="ml-1">→</span>
                 </button>
               </div>

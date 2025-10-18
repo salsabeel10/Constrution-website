@@ -3,8 +3,8 @@ import Experience from '../../components/Experience'
 
 const About = () => {
   return (
-    <div>
-        
+    <div className='mt-25'>
+        <Experience />
     </div>
   )
 }

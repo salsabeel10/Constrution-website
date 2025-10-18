@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -15,18 +16,26 @@ const Navbar = () => {
 
         {/* Center: Navigation Links */}
         <ul className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex space-x-10 text-white text-base">
+          <Link to={'/'}>
           <li className="hover:text-[#00BFFF] transition cursor-pointer">
             Home
           </li>
+          </Link>
+          <Link to={'/ourservices'}>
           <li className="hover:text-[#00BFFF] transition cursor-pointer">
             Our Services
           </li>
+          </Link>
+          <Link to={'/about'}>
           <li className="hover:text-[#00BFFF] transition cursor-pointer">
             About Us
           </li>
+          </Link>
+          <Link to={'/contact'}>
           <li className="hover:text-[#00BFFF] transition cursor-pointer">
             Contact
           </li>
+          </Link>
         </ul>
 
         {/* Right: Placeholder for spacing balance or future button */}

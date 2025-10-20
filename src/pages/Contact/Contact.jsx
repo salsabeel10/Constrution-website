@@ -1,4 +1,5 @@
 import React from 'react'
+import Experience from '../../components/Experience'
 
 const Contact = () => {
   return (

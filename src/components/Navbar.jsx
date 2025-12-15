@@ -29,6 +29,13 @@ const Navbar = () => {
               Our Services
             </li>
           </Link>
+
+          <Link to="/project">
+            <li className="hover:text-[#00BFFF] transition cursor-pointer">
+              Our Projects
+            </li>
+          </Link>
+          
           <Link to="/about">
             <li className="hover:text-[#00BFFF] transition cursor-pointer">
               About Us
@@ -65,6 +72,9 @@ const Navbar = () => {
           </Link>
           <Link to="/ourservices" onClick={() => setIsOpen(false)}>
             <span className="hover:text-[#00BFFF]">Our Services</span>
+          </Link>
+          <Link to="/project" onClick={() => setIsOpen(false)}>
+            <span className="hover:text-[#00BFFF]">Our Projects</span>
           </Link>
           <Link to="/about" onClick={() => setIsOpen(false)}>
             <span className="hover:text-[#00BFFF]">About Us</span>

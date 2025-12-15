@@ -66,7 +66,7 @@ const LatestProjects = () => {
                   href="#"
                   className="text-orange-500 font-medium hover:underline cursor-pointer "
                 >
-                  View Details
+                  Get Qoute
                 </a>
               </div>
             </div>

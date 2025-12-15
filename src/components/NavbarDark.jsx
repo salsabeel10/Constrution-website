@@ -18,62 +18,70 @@ const NavbarDark = () => {
 
         {/* Center: Navigation Links */}
         <ul className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex space-x-10 text-black text-base">
-          <Link to={'/'}>
-          <li className="hover:text-[#00BFFF] transition cursor-pointer">
-            Home
-          </li>
+          <Link to={"/"}>
+            <li className="hover:text-[#00BFFF] transition cursor-pointer">
+              Home
+            </li>
           </Link>
-          <Link to={'/ourservices'}>
-          <li className="hover:text-[#00BFFF] transition cursor-pointer">
-            Our Services
-          </li>
+          <Link to={"/ourservices"}>
+            <li className="hover:text-[#00BFFF] transition cursor-pointer">
+              Our Services
+            </li>
           </Link>
-          <Link to={'/about'}>
-          <li className="hover:text-[#00BFFF] transition cursor-pointer">
-            About Us
-          </li>
+          <Link to={"/project"}>
+            <li className="hover:text-[#00BFFF] transition cursor-pointer">
+              Our Projects
+            </li>
           </Link>
-          <Link to={'/contact'}>
-          <li className="hover:text-[#00BFFF] transition cursor-pointer">
-            Contact
-          </li>
+          <Link to={"/about"}>
+            <li className="hover:text-[#00BFFF] transition cursor-pointer">
+              About Us
+            </li>
+          </Link>
+          <Link to={"/contact"}>
+            <li className="hover:text-[#00BFFF] transition cursor-pointer">
+              Contact
+            </li>
           </Link>
         </ul>
 
-         {/* Right: Hamburger Icon (Mobile) */}
-                <div className="md:hidden">
-                  {isOpen ? (
-                    <FiX
-                      className="text-black text-3xl cursor-pointer"
-                      onClick={() => setIsOpen(false)}
-                    />
-                  ) : (
-                    <FiMenu
-                      className="text-black text-3xl cursor-pointer"
-                      onClick={() => setIsOpen(true)}
-                    />
-                  )}
-                </div>
-              </div>
-        
-              {/* Mobile Menu (Dropdown) */}
-              {isOpen && (
-                <div className="md:hidden bg-black/60 bg-opacity-90 text-white flex flex-col items-center space-y-4 py-6">
-                  <Link to="/" onClick={() => setIsOpen(false)}>
-                    <span className="hover:text-[#00BFFF]">Home</span>
-                  </Link>
-                  <Link to="/ourservices" onClick={() => setIsOpen(false)}>
-                    <span className="hover:text-[#00BFFF]">Our Services</span>
-                  </Link>
-                  <Link to="/about" onClick={() => setIsOpen(false)}>
-                    <span className="hover:text-[#00BFFF]">About Us</span>
-                  </Link>
-                  <Link to="/contact" onClick={() => setIsOpen(false)}>
-                    <span className="hover:text-[#00BFFF]">Contact</span>
-                  </Link>
-                </div>
-              )}
-            </nav>
+        {/* Right: Hamburger Icon (Mobile) */}
+        <div className="md:hidden">
+          {isOpen ? (
+            <FiX
+              className="text-black text-3xl cursor-pointer"
+              onClick={() => setIsOpen(false)}
+            />
+          ) : (
+            <FiMenu
+              className="text-black text-3xl cursor-pointer"
+              onClick={() => setIsOpen(true)}
+            />
+          )}
+        </div>
+      </div>
+
+      {/* Mobile Menu (Dropdown) */}
+      {isOpen && (
+        <div className="md:hidden bg-black/60 bg-opacity-90 text-white flex flex-col items-center space-y-4 py-6">
+          <Link to="/" onClick={() => setIsOpen(false)}>
+            <span className="hover:text-[#00BFFF]">Home</span>
+          </Link>
+          <Link to="/ourservices" onClick={() => setIsOpen(false)}>
+            <span className="hover:text-[#00BFFF]">Our Services</span>
+          </Link>
+          <Link to="/project" onClick={() => setIsOpen(false)}>
+            <span className="hover:text-[#00BFFF]">Our Projects</span>
+          </Link>
+          <Link to="/about" onClick={() => setIsOpen(false)}>
+            <span className="hover:text-[#00BFFF]">About Us</span>
+          </Link>
+          <Link to="/contact" onClick={() => setIsOpen(false)}>
+            <span className="hover:text-[#00BFFF]">Contact</span>
+          </Link>
+        </div>
+      )}
+    </nav>
   );
 };
 

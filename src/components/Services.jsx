@@ -23,18 +23,18 @@ const projects = [
   },
 ];
 
-const categories = ["Residential", "Commercial", "Maintenance", "Renovation"];
+const Services_List = ["Electrical", "Mechanical", "Maintenance", "Renovation"];
 
-const LatestProjects = () => {
+const Services = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6 text-center">
         {/* Section title */}
-        <h2 className="text-2xl font-semibold mb-8">Latest Projects</h2>
+        <h2 className="text-2xl font-semibold mb-8">Our Services</h2>
 
-        {/* Category buttons */}
+        {/* Services buttons */}
         <div className="flex flex-wrap justify-center gap-3 mb-10">
-          {categories.map((cat, index) => (
+          {Services_List.map((cat, index) => (
             <button
               key={index}
               className="px-4 py-1 text-gray-700 border rounded-full hover:bg-orange-500 hover:text-white transition cursor-pointer"
@@ -83,4 +83,4 @@ const LatestProjects = () => {
   );
 };
 
-export default LatestProjects;
+export default Services;

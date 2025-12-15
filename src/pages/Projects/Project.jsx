@@ -3,7 +3,7 @@ import LatestProjects from '../../components/LatestProjects'
 
 const Project = () => {
   return (
-    <div className='mt-25'>
+    <div className='mt-20'>
         <LatestProjects />
     </div>
   )
